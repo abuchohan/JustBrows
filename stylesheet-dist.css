@@ -1,0 +1,7 @@
+html, body, ul, ol {
+  margin: 0;
+  padding: 0; }
+
+body {
+  border: 5px solid brown;
+  font-size: 1rem; }
