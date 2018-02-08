@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+  <title>Social Icons</title>
+  <g>
+    <polygon points="38.04 18.22 30.96 23.77 34.91 30.06 29.81 24.67 25.03 28.41 25 28.39 24.97 28.41 20.19 24.67 15.09 30.06 19.04 23.77 11.96 18.22 11.96 33.7 25 33.7 38.04 33.7 38.04 18.22" fill="#fff" fill-rule="evenodd"/>
+    <path d="M36.48,16.3h-23a1.51,1.51,0,0,0-1.17.57L25,26.77l0,0,0,0,12.62-9.9A1.51,1.51,0,0,0,36.48,16.3Z" fill="#fff" fill-rule="evenodd"/>
+    <circle cx="25" cy="25" r="23.19" fill="none" stroke="#fff" stroke-miterlimit="10"/>
+  </g>
+</svg>
