@@ -7,11 +7,12 @@ var scrollPos = window.scrollY;
 //getting navigation in a variable
 var navigation = document.getElementById("dynamic-wrapper");
 
+
 //function to add a class
 function addClass() {
     navigation.classList.add("dynamic-nav");
 }
-
+    
 // function to remove class
 function removeClass() {
     navigation.classList.remove("dynamic-nav");
@@ -25,6 +26,9 @@ window.addEventListener("scroll", function () {
 }       else {
             removeClass();
 } } );
+
+
+
 
 function getElementY(query) {
   return window.pageYOffset + document.querySelector(query).getBoundingClientRect().top

@@ -2,21 +2,29 @@
 html,body,ul,ol,li,form,fieldset,nav {margin: 0;padding: 0;list-style: none;}
 h1,h2,h3,h4,p {margin: 0;}
 img {border: 0;}
+address {font-style: normal;}
 
 // getting font
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
-@font-face {
-font-family: 'Green Sans Web';
-src:
-    local('Bickham-Script-Pro-Regular.ttf'),
-    url('fonts/Bickham-Script-Pro-Regular.woff');
-}
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
 
+
+
+// importing local font
 @font-face {
   font-family: "myfont";
-  src: url("fonts/Bickham-Script-Pro-Regular.woff") format("woff");
+  src: url("../fonts/Bickham Script Pro Regular.woff") format("woff");
+  src: local("../fonts/Bickham-Script-Pro-Regular.ttf") format("truetype");
 }
+//
+//@font-face {
+//  font-family: "Your typeface";
+//  src: url("type/filename.eot");
+//  src: local("☺"),
+//    url("type/filename.woff") format("woff"),
+//    url("type/filename.otf") format("opentype"),
+//    url("type/filename.svg#filename") format("svg");
+//  }
 
 // giving everything relative size
 *,
@@ -42,6 +50,30 @@ $text: rgba(0, 0, 0, 1);
 $white-text: rgba(255, 255, 255, 1);
 $background: rgba(56, 56, 56, 1);
 
+@keyframes animate-left {
+  from {
+    transform: translateY(50px);
+      opacity: 0;
+  }
+  to {
+    transform: translatY(0px);
+      opacity: 1;
+  } 
+        }
+
+@keyframes bounce {
+    0% {
+        transform: rotate(-45deg) translate(0, 0);
+    }
+    50% {
+        transform: rotate(-45deg) translate(-4px, 4px);
+    }
+    100% {
+        transform: rotate(-45deg) translate(0, 0);
+    }
+}
+
+
 //------------------- END ---------------------
 
 body {
@@ -50,7 +82,16 @@ body {
 } 
 
 h1 {
-    font-family: myfont;
+    font-family: "myfont";
+    font-size: 100px;
+    font-weight: 400;
+    line-height: 1;
+}
+
+@media screen and (max-width: 425px) {
+    .hero-image__heading  {
+        font-size: 75px;
+    }
 }
 
 
@@ -59,6 +100,7 @@ h1 {
 .contactme__heading {
     text-align: center;
     padding: 20px 0;
+    font-size: 26px;
 }
 
 //------------------- Hero Images -------------
@@ -67,7 +109,7 @@ h1 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .2);
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .4);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -76,17 +118,66 @@ h1 {
 
 
 .hero-image__heading {
+        font-family: "myfont";
     color: $white-text;
-    grid-column: 2 / 3;
+    grid-column: 1 / 4;
     grid-row: 2 / 4;
-    margin: 0 auto;
     align-self: center;
+    text-align: center;
+    
 }
+
+.hero-image__heading--subpage {
+    grid-row: 3 / 4;
+}
+
 
 
 .hero-image--pricing {
-    background-image: url(http://ppcdn.500px.org/75319705/1991f76c0c6a91ae1d23eb94ac5c7a9f7e79c480/2048.jpg);
+ background-image: url(../images/hero-images/pricing.jpg);
 }
+
+.hero-image--gallery {
+ background-image: url(../images/hero-images/homepage.jpg);
+}
+.hero-image--contactme {
+ background-image: url(../images/hero-images/contactme.jpg);
+}
+
+.hero-image__heading--homepage {
+        opacity: 0;
+    grid-row: 2 / 3;
+    align-self: flex-start;
+        animation:animate-left 1.3s ease .5s;
+    animation-fill-mode: forwards;
+}
+
+.hero-image__text {
+    opacity: 0;
+    grid-row: 3 / 4;
+    grid-column: 1 / 4;
+    text-align: center;
+    color: $white-text;
+    align-self: end;
+    padding: 0 10px;
+    animation:animate-left 1.3s ease 1.3s;
+    animation-fill-mode: forwards;
+}
+
+.hero-image__text--section1 {
+        opacity: 0;
+        animation:animate-left 1.3s ease 2.4s;
+    animation-fill-mode: forwards;
+}
+
+.hero-image__text--section2 {
+        opacity: 0;
+        animation:animate-left 1.3s ease 3.4s;
+    animation-fill-mode: forwards;
+}
+
+
+
 
 
 //------------------- Hero Video -------------
@@ -146,7 +237,7 @@ video {
     left: 0;
     width: 100%;
     background-color: $accent;
-    z-index: 1;
+    z-index: 3;
     display: flex;
     justify-content: space-around;
 
@@ -255,6 +346,7 @@ a {
     top:0;
         left: 0;
         right: 0;
+    z-index: 2;
 }
 
 
@@ -268,27 +360,19 @@ a {
     border-left: 5px solid #fff;
     border-bottom: 5px solid #fff;
     transform: rotate(-45deg);
-    animation: bounce 1.5s infinite;
+    animation: bounce 1.5s infinite 4.2s;
     box-sizing: border-box;
     transition: 0.5s ease-in-out;
+
 }
+
 
 .downArrow:hover {
     cursor: pointer;
     animation-play-state: paused;
 }
 
-@keyframes bounce {
-    0% {
-        transform: rotate(-45deg) translate(0, 0);
-    }
-    50% {
-        transform: rotate(-45deg) translate(-3px, 3px);
-    }
-    100% {
-        transform: rotate(-45deg) translate(0, 0);
-    }
-}
+
 
 
 
@@ -309,6 +393,8 @@ a {
 }
 
 
+
+
 //------------------- END ---------------------
 
 
@@ -324,6 +410,7 @@ a {
     display: flex;
     margin: 20px auto 90px auto;
     max-width: 1440px;
+    justify-content: center;
 
     .testimonials__name {
         color: $background;
@@ -357,6 +444,7 @@ a {
         color: $background;
         max-width: 280px;
         margin: 0 auto;
+        line-height: 1.6;
         &:before, &:after {
             content: '"';
         }
@@ -370,6 +458,9 @@ a {
 
 //------------------- Pricing Menu ------------
 //moblie first pricing menu
+.pricing-menu__heading {
+    font-weight: 700;
+}
 .pricing-menu {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -447,24 +538,27 @@ a {
 }
 
 .pricing-menu__description {
-    font-style: italic;
     font-size: .9em;
+    font-weight: 300;
     line-height: 1.5em;
 }
 
 .pricing-menu__price {
     float: right;
-    font-weight: bold;
+    font-weight: 400;
     margin-top: -25px;
     &:before {
         content: "£"
     }
-    //    .pricing-menu__price--from {
-    //        &:before {
-    //            content: "from";
-    //        }
-    //    }
+
 }
+
+        .pricing-menu__price--from {
+            &:before {
+                content: "from  ";
+                font-size: 14px;
+            }
+        }
 
 //------------------- END ---------------------
 
@@ -488,13 +582,20 @@ a {
     grid-row: 2 / 3;
     margin: 0 auto;
     align-self: end;
-    padding: 15px;
+    padding: 25px 15px;
 }
 
 .aboutme__text {
     padding: 15px;
+    line-height: 1.6;
     grid-row: 3/ 4;
     lign-height: 1.3rem;
+}
+
+@media screen and (max-width: 829px) {
+    .aboutme__text {
+text-align: center;
+}
 }
 
 .aboutme__contact-section {
@@ -505,15 +606,18 @@ a {
     grid-row: 4 / 5;
     padding: 10px;
     text-align: center;
+            font-weight: 700;
+    font-size: 18px;
 }
 
 .aboutme__contact-section__lnumber {
     grid-row: 5 / 6;
     padding: 10px;
     text-align: center;
+            font-weight: 700;
+    font-size: 18px;
 }
 
-.aboutme__contact-section__email {}
 
 .aboutme__image {
     border-radius: 50%;
@@ -562,6 +666,7 @@ a {
         grid-row: 4 / 5;
         padding: 0 20px;
         text-align: center;
+
     }
     .aboutme__contact-section__lnumber {
         grid-column: 3 / 4;
@@ -713,12 +818,16 @@ form:after {
             text-decoration: underline;
         }
     }
+    li {
+        padding: 1px;
+    }
 }
 
 
 .page-footer__address {
     padding: 20px 10px;
     border-top: 1px solid grey;
+
 }
 
 .page-footer__social {
