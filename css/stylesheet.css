@@ -469,7 +469,7 @@ video {
     content: "£"; }
 
 .pricing-menu__price--from:before {
-  content: "from  ";
+  content: "from ";
   font-size: 14px; }
 
 .aboutme {
