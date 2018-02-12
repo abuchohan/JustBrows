@@ -667,6 +667,7 @@ form:after {
 .page-footer__site-map {
   padding: 20px 10px; }
   .page-footer__site-map a {
+    color: white;
     text-decoration: none; }
     .page-footer__site-map a:visited {
       color: white; }
@@ -716,6 +717,7 @@ form:after {
       grid-template-rows: 1fr 1fr;
       overflow: hidden; }
       .page-footer .page-footer__site-map {
+        color: white;
         grid-column: 1 / 2;
         grid-row: 1 / 2;
         margin: 0 auto; }

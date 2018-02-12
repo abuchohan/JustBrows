@@ -292,6 +292,7 @@ a {
   justify-content: flex-end;
   padding: 20px 13px 10px 13px;
     position: relative;
+    
     &:visited {
                 color: $white-text;
             } // hover animation
@@ -810,6 +811,7 @@ form:after {
     padding: 20px 10px;
 
     a {
+        color: $white-text;
         text-decoration: none;
         &:visited {
             color: white;
@@ -871,6 +873,7 @@ form:after {
         overflow: hidden;
 
         .page-footer__site-map {
+            color: $white-text;
             grid-column: 1 / 2;
             grid-row: 1 / 2;
             margin: 0 auto;
