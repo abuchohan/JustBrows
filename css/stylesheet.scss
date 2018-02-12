@@ -316,7 +316,10 @@ a {
     } }
 
 .navigation__logo {
+    width: 122px;
+    height: auto;
   margin-right: auto;
+    shape-rendering: geometricPrecision;
 }
 .navigation a {
   color: white;

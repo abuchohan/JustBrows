@@ -279,7 +279,10 @@ video {
       -ms-transform: scaleX(1);
       transform: scaleX(1); }
   .navigation__logo {
-    margin-right: auto; }
+    width: 122px;
+    height: auto;
+    margin-right: auto;
+    shape-rendering: geometricPrecision; }
   .navigation a {
     color: white;
     display: block;
