@@ -717,10 +717,11 @@ form:after {
       grid-template-rows: 1fr 1fr;
       overflow: hidden; }
       .page-footer .page-footer__site-map {
-        color: white;
         grid-column: 1 / 2;
         grid-row: 1 / 2;
         margin: 0 auto; }
+        .page-footer .page-footer__site-map a {
+          color: white; }
       .page-footer .page-footer__address {
         grid-column: 2 / 3;
         grid-row: 1 / 2;

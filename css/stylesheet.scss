@@ -873,10 +873,13 @@ form:after {
         overflow: hidden;
 
         .page-footer__site-map {
-            color: $white-text;
+
             grid-column: 1 / 2;
             grid-row: 1 / 2;
             margin: 0 auto;
+            a {
+                            color: $white-text;
+            }
         }
         .page-footer__address {
             grid-column: 2 / 3;
