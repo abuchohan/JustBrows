@@ -278,7 +278,7 @@ video {
       -webkit-transform: scaleX(1);
       -ms-transform: scaleX(1);
       transform: scaleX(1); }
-  .navigation li:first-child {
+  .navigation__logo {
     margin-right: auto; }
   .navigation a {
     color: white;
@@ -672,8 +672,6 @@ form:after {
       color: white; }
     .page-footer__site-map a:hover {
       text-decoration: underline; }
-  .page-footer__site-map li {
-    padding: 1px; }
 
 .page-footer__address {
   padding: 20px 10px;
@@ -711,8 +709,7 @@ form:after {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  grid-gap: 0;
-  margin-top: 10%; }
+  grid-gap: 0; }
   @media screen and (min-width: 426px) {
     .page-footer {
       grid-template-columns: 1fr 1fr;

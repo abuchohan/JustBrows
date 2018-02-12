@@ -8,7 +8,7 @@ address {font-style: normal;}
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
 
-
+// 
 
 // importing local font
 @font-face {
@@ -314,7 +314,7 @@ a {
     
     } }
 
-.navigation li:first-child {
+.navigation__logo {
   margin-right: auto;
 }
 .navigation a {
@@ -818,10 +818,10 @@ form:after {
             text-decoration: underline;
         }
     }
-    li {
-        padding: 1px;
-    }
+
 }
+
+
 
 
 .page-footer__address {
@@ -864,7 +864,6 @@ form:after {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-gap: 0;
-    margin-top: 10%;
 
     @media screen and (min-width: 426px) {
         grid-template-columns: 1fr 1fr;
