@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <img class="hero-image__logo" src="images/logo/justBrowsLogo.svg" alt="just brows logo">
+<a href="index.html"><img class="hero-image__logo" src="images/logo/justBrowsLogo.svg" alt="just brows logo"></a>
     <!-- Skiplinks -->
     <p class=skiplinks> <a href="#content">Skip to content</a> <a href="#navigation">Skip to navigation</a> </p>
 
@@ -25,7 +25,7 @@
 <nav role="navigation" id="navigation">
     <div class="dynamic-wrapper" id="dynamic-wrapper">
         <div class="navigation" id="dynamic">
-            <div class="navigation__logo"><a href=""><img src="images/logo/justBrowsLogo.svg" alt="just brows logo"></a></div>
+            <div class="navigation__logo"><a href="index.html"><img src="images/logo/justBrowsLogo.svg" alt="just brows logo"></a></div>
             <div class="navigation__items">
                 <div class="navigation__home"><a href="index.html" title="just brows landing page with reviews from previous customers">Home</a></div>
                 <div class="navigation__pricing"><a href="pricing.html" title="pricing list for just brows beauty salon">Pricing</a></div>
@@ -39,54 +39,45 @@
     </div>
 
 
+<!-- Body Content -->
+<section class="page-content" id="content" role="main">
+
+    <div class="aboutme">
+        <img class="aboutme__image" src="images/contact-image/shaista-chohan.jpg" alt="self portrait of shaista chohan">
+        <h2 class="aboutme__heading">Shaista Chohan</h2>
+        <p class="aboutme__text"> Hello, I’m Shaista. A beauty therapist who brings you high quality treatments. I pride myself in making my clients feel pampered, relaxed and rejuvenated. Bringing out their individual natural beauty. </p>
+        <div class="aboutme__contact-section"> </div>
+        <div class="aboutme__contact-section__mnumber">Mobile:<br> 07598968598 </div>
+        <div class="aboutme__contact-section__lnumber"> Landline:<br> 01279 458465 </div>
+        <div class="aboutme__contact-section__email"></div>
 
 
-
-
-
-
-
-    <!-- Body Content -->
-    <section class="page-content" id="content" role="main">
-
-        <div class="aboutme">
-            <img class="aboutme__image" src="images/contact-image/shaista-chohan.jpg" alt="self portrait of shaista chohan">
-            <h2 class="aboutme__heading">Shaista Chohan</h2>
-            <p class="aboutme__text"> Hello, I’m Shaista. A beauty therapist who brings you high quality treatments. I pride myself in making my clients feel pampered, relaxed and rejuvenated. Bringing out their individual natural beauty. </p>
-            <div class="aboutme__contact-section"> </div>
-            <div class="aboutme__contact-section__mnumber">Mobile:<br> 07598968598 </div>
-            <div class="aboutme__contact-section__lnumber"> Landline:<br> 01279 458465 </div>
-            <div class="aboutme__contact-section__email"></div>
-
-
+    </div>
+    <h2 class=contactme__heading> Get in touch</h2>
+    <form id="contact-form" method="POST" action="http://formspree.io/abuchohan@hotmail.co.uk">
+        <div class="half">
+            <div class="form-left">
+                <input type="text" class="input-name" placeholder="Name">
+                <input type="email" class="input-email" placeholder="Email address">
+                <input type="text" class="input-subject" placeholder="Service(s)">
+            </div>
         </div>
-        <h2 class=contactme__heading> Get in touch</h2>
-        <form id="contact-form" method="POST" action="http://formspree.io/abuchohan@hotmail.co.uk">
-            <div class="half">
-                <div class="form-left">
-                    <input type="text" class="input-name" placeholder="Name">
-                    <input type="email" class="input-email" placeholder="Email address">
-                    <input type="text" class="input-subject" placeholder="Service(s)">
-                </div>
-            </div>
-            <div class="form-right">
-                <textarea class="form-message" name="message" placeholder="Message"></textarea>
-            </div>
-            <input class="form-submit" type="submit" value="Send">
-        </form>
-    </section>
+        <div class="form-right">
+            <textarea class="form-message" name="message" placeholder="Message"></textarea>
+        </div>
+        <input class="form-submit" type="submit" value="Send">
+    </form>
+</section>
 
 
-    <!--scroll to top button not needed for home page will be removed-->
-    <!--     <button id="scrollTop">scroll to top</button>-->
-    <h2 class="contactme__heading"> Where you will find us</h2>
-    <div id="map"></div>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDK2RcLuYXnQ4KxNtCg3CndyCYgvy1xsH4&callback=initMap" async defer></script>
-
+<h2 class="contactme__heading"> Where you will find us</h2>
+<div id="map"></div>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDK2RcLuYXnQ4KxNtCg3CndyCYgvy1xsH4&callback=initMap" async defer></script>
+    
     <!-- Footer -->
-    <div class="page-footer__background">
+<div class="page-footer__background">
 <footer class="page-footer" role="contentinfo">
-
+    
     <ul class="page-footer__site-map">
         <li class="page-footer__heading">Pages</li>
                 <li><a href="index.html" title="just brows landing page with reviews from previous customers">Home</a></li>
@@ -94,24 +85,20 @@
                 <li><a href="gallery.html" title="a collection of images from previous clients">Gallery</a></li>
                 <li ><a href="contactme.html" title="contact information that includes a form for just brows">Contact Me</a></li>
     </ul>
-
+    
     <ul class="page-footer__address">
         <li class="page-footer__heading">Address</li>
-        <li>Unit 9<br>Staple Tye Shopping Centre<br>Southern Way<br>Harlow <br>CM18 7PJ<br></li>
-               
+        <li>Unit 9<br>Staple Tye Shopping Centre<br>Southern Way<br>Harlow <br>CM18 7PJ<br></li>               
     </ul>
 
     <div class="page-footer__social">
         <div class="page-footer__heading">Social Media</div>
         <div class="page-footer__social-icons">
-            <div class="page-footer__social-icon page-footer__social-icon--email"><a href=""><img src="images/social-icons/email.svg" alt="email icon"></a></div>
-            <div class="page-footer__social-icon page-footer__social-icon--instagram"><a href=""><img src="images/social-icons/instagram.svg" alt="instagram icon"></a></div>
-            <div class="page-footer__social-icon page-footer__social-icon--twitter"><a href=""><img src="images/social-icons/twitter.svg" alt="twiiter icon"></a></div>
-            <div class="page-footer__social-icon page-footer__social-icon--facebook"><a href=""><img src="images/social-icons/facebook.svg" alt="facebook icon"></a></div>
-            <div class="page-footer__social-icon page-footer__social-icon--snapchat"><a href=""><img src="images/social-icons/snapchat.svg" alt="snapchat icon"></a></div>
+            <div class="page-footer__social-icon page-footer__social-icon--email"><a href="mailto:mailto:shaista.justbrows@hotmail.co.uk"><img src="images/social-icons/email.svg" alt="email icon"></a></div>
+            <div class="page-footer__social-icon page-footer__social-icon--instagram"><a href="https://www.instagram.com/star_lion777/"><img src="images/social-icons/instagram.svg" alt="instagram icon"></a></div>
+            <div class="page-footer__social-icon page-footer__social-icon--facebook"><a href="https://en-gb.facebook.com/Just-Brows-in-Top-2-Toe-Hair-Salon-146466428761645/"><img src="images/social-icons/facebook.svg" alt="facebook icon"></a></div>
         </div>
     </div>
-
 
 </footer>
     </div>

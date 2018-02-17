@@ -194,7 +194,8 @@ video {
   margin: 0 auto;
   left: 0;
   right: 0;
-  padding-top: 20px; }
+  padding-top: 20px;
+  z-index: 5; }
 
 @media screen and (max-width: 499px) {
   .navigation {
@@ -202,7 +203,7 @@ video {
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #927b39;
+    background-color: #383838;
     z-index: 3;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -466,10 +467,11 @@ video {
   font-weight: 400;
   margin-top: -25px; }
   .pricing-menu__price:before {
-    content: "£"; }
+    content: "£";
+    font-size: 14px; }
 
 .pricing-menu__price--from:before {
-  content: "from ";
+  content: "from £";
   font-size: 14px; }
 
 .aboutme {
@@ -601,6 +603,49 @@ video {
     -webkit-column-count: 1;
     column-count: 1; } }
 
+.contact-button {
+  border: 1px solid #383838;
+  border-radius: 15px;
+  font-size: 1.2rem;
+  display: block;
+  text-align: center;
+  max-width: 200px;
+  padding: 15px;
+  text-decoration: none;
+  margin: 60px auto;
+  -webkit-animation: size 2s infinite 0s;
+  animation: size 2s infinite 0s;
+  -webkit-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out; }
+  .contact-button:hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+    background: grey;
+    color: white; }
+
+@-webkit-keyframes size {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  50% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05); }
+  100% {
+    -webkit-transform: rotate(1);
+    transform: rotate(1); } }
+
+@keyframes size {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  50% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05); }
+  100% {
+    -webkit-transform: rotate(1);
+    transform: rotate(1); } }
+
 form {
   padding: 20px;
   max-width: 1200px;
@@ -696,7 +741,7 @@ form:after {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  max-width: 275px;
+  max-width: 150px;
   margin: 0 auto; }
 
 .page-footer__social-icon {
@@ -738,7 +783,7 @@ form:after {
         margin-top: 3%;
         text-align: center; }
       .page-footer .page-footer__social-icons {
-        max-width: 275px;
+        max-width: 150px;
         margin: 6px auto; } }
   @media screen and (min-width: 1000px) {
     .page-footer {
